@@ -19,14 +19,15 @@
 #' either "train" or "predict".
 #' @return If \code{type} is "train", a squared symmetric matrix whose i,j value is the is the distance between
 #' data points i and j. Note that i,j are data observations related to same rows in 
-#' \code{data} file. If \code{type} is "train", a matrix with ...
+#' \code{data} file. If \code{type} is "predict", a matrix with as many rows as 
+#' observations in \code{data} and as many columns as observations in 
+#' \code{memory}; value i,j is distance between data[i] and memory[j].
 #' @export
 #' @import assertthat 
 #' @examples
 #  create artificial dataset
 #' inputsTest   <- matrix(rnorm(200), ncol=2)
 #' inputsTrain  <- matrix(rnorm(200), ncol=2)
-#' classesTrain <- c(rep(0, 50), rep(1, 50))
 #' # compute distances
 #' distMatrix<-distance(inputsTest, memory=inputsTrain,p=2,type="predict")
 #' 
@@ -118,7 +119,6 @@ distance<- function(data, memory=NULL,p=2,type="train"){
 #' # create artificial dataset
 #' inputsTest   <- matrix(rnorm(200), ncol=2)
 #' inputsTrain  <- matrix(rnorm(200), ncol=2)
-#' classesTrain <- c(rep(0, 50), rep(1, 50))
 #' # compute distances 
 #' distMatrix<-distance(inputsTest, memory=inputsTrain,p=2,type="predict")
 #' # compute neighbors

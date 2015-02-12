@@ -22,7 +22,6 @@ a sortest list of points ordered by distance (nearest neighbors).
 # create artificial dataset
 inputsTest   <- matrix(rnorm(200), ncol=2)
 inputsTrain  <- matrix(rnorm(200), ncol=2)
-classesTrain <- c(rep(0, 50), rep(1, 50))
 # compute distances
 distMatrix<-distance(inputsTest, memory=inputsTrain,p=2,type="predict")
 # compute neighbors
