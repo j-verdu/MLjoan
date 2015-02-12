@@ -1,0 +1,9 @@
+Package: MLjoan
+Title: Wrapper package for different machine learning classifier functions
+Version: 0.0.0.9000
+Authors@R: person("Joan", "Verdu", , "joan.verdu@barcelonagse.eu", role = c("aut", "cre"))
+Description: Includes the following classification functions: linear discriminant analysis and k-NN (nearest neighbor). It also includes functions to generate distances and neighbors.
+Depends: R (>= 3.1.1)
+License: Creative Commons CC BY-SA
+LazyData: true
+Imports: assertthat, mvtnorm
